@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import Stats from "@/components/sections/Stats";
 import ServicesSection from "@/components/sections/Services";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Technologies from "@/components/sections/Technologies";
@@ -10,6 +11,7 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <Stats />
       <ServicesSection />
       <WhyChooseUs />
       <Technologies />
