@@ -79,7 +79,7 @@ export default function Contact() {
             {/* Info */}
             <div className="space-y-6">
               {[
-                { icon: Mail, title: "Email", value: "hello@nexora.tech" },
+                { icon: Mail, title: "Email", value: "hello@basiprog.com" },
                 { icon: Phone, title: "Phone", value: "+1 (555) 123-4567" },
                 { icon: MapPin, title: "Headquarters", value: "New York, NY" },
               ].map((item) => (

@@ -34,9 +34,9 @@ export default function About() {
       <section className="section-padding gradient-hero">
         <div className="container-custom">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
-            <h1 className="heading-xl mb-6">Building the Future of <span className="gradient-text">Enterprise Technology</span></h1>
+            <h1 className="heading-xl mb-6">Building the Future of <span className="gradient-text">Digital Products</span></h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Since 2014, Nexora Technologies has been the trusted technology partner for the world's most ambitious organizations. We don't just write code — we architect digital transformation.
+              Basiprog Digital Solutions is the trusted digital partner for ambitious organizations. We don't just write code — we craft exceptional digital experiences.
             </p>
           </motion.div>
         </div>

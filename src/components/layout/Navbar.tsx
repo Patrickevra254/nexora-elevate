@@ -34,10 +34,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-lg bg-accent flex items-center justify-center">
-            <span className="text-accent-foreground font-bold text-sm">N</span>
+            <span className="text-accent-foreground font-bold text-sm">B</span>
           </div>
           <span className="font-bold text-lg tracking-tight text-foreground">
-            Nexora
+            Basiprog
           </span>
         </Link>
 
