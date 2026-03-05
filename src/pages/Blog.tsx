@@ -3,6 +3,7 @@ import { Clock, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SectionHeader from "@/components/shared/SectionHeader";
+import heroBlog from "@/assets/hero-blog.jpg";
 
 const posts = [
   { title: "The Future of Cloud-Native Architecture in 2025", category: "Cloud", date: "Feb 2025", readTime: "8 min", excerpt: "How organizations are rethinking their cloud strategies with serverless-first approaches." },
@@ -16,8 +17,12 @@ const posts = [
 export default function Blog() {
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="section-padding gradient-hero">
-        <div className="container-custom">
+      <section className="relative section-padding overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroBlog} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        </div>
+        <div className="container-custom relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <h1 className="heading-xl mb-6">Engineering <span className="gradient-text">Insights</span></h1>
             <p className="text-lg text-muted-foreground">Perspectives on technology, architecture, and innovation from our engineering team.</p>

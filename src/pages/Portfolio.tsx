@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionHeader from "@/components/shared/SectionHeader";
 import CTA from "@/components/sections/CTA";
+import heroPortfolio from "@/assets/hero-portfolio.jpg";
 
 const categories = ["All", "Cloud", "AI/ML", "Security", "Software", "DevOps"];
 
@@ -25,8 +26,12 @@ export default function Portfolio() {
 
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="section-padding gradient-hero">
-        <div className="container-custom">
+      <section className="relative section-padding overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroPortfolio} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        </div>
+        <div className="container-custom relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <h1 className="heading-xl mb-6">Our <span className="gradient-text">Portfolio</span></h1>
             <p className="text-lg text-muted-foreground">Real projects. Real impact. Real results.</p>
