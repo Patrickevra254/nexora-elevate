@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
+import heroContact from "@/assets/hero-contact.jpg";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -26,8 +27,12 @@ export default function Contact() {
 
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="section-padding gradient-hero">
-        <div className="container-custom">
+      <section className="relative section-padding overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroContact} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        </div>
+        <div className="container-custom relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
             <h1 className="heading-xl mb-6">Let's Build <span className="gradient-text">Together</span></h1>
             <p className="text-lg text-muted-foreground">Tell us about your project. We'll respond within 24 hours.</p>

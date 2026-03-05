@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Target, Eye, Users, Award, Globe, Lightbulb } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
+import heroAbout from "@/assets/hero-about.jpg";
 
 const values = [
   { icon: Target, title: "Precision", description: "Every line of code, every architecture decision, made with purpose." },
@@ -31,8 +32,12 @@ export default function About() {
   return (
     <div className="pt-[var(--nav-height)]">
       {/* Hero */}
-      <section className="section-padding gradient-hero">
-        <div className="container-custom">
+      <section className="relative section-padding overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroAbout} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        </div>
+        <div className="container-custom relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
             <h1 className="heading-xl mb-6">Building the Future of <span className="gradient-text">Digital Products</span></h1>
             <p className="text-lg text-muted-foreground leading-relaxed">

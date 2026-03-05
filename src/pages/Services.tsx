@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/shared/SectionHeader";
 import CTA from "@/components/sections/CTA";
 import { Link } from "react-router-dom";
+import heroServices from "@/assets/hero-services.jpg";
 
 const services = [
   {
@@ -60,8 +61,12 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="section-padding gradient-hero">
-        <div className="container-custom">
+      <section className="relative section-padding overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={heroServices} alt="" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
+        </div>
+        <div className="container-custom relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
             <h1 className="heading-xl mb-6">Digital Services <span className="gradient-text">Without Compromise</span></h1>
             <p className="text-lg text-muted-foreground">End-to-end digital solutions crafted for businesses that demand excellence.</p>
