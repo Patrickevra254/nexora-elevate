@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: "200+", label: "Projects Delivered" },
-  { value: "99.9%", label: "Uptime SLA" },
-  { value: "50+", label: "Enterprise Clients" },
-  { value: "12+", label: "Years of Excellence" },
+  { value: "99.9%", label: "Client Satisfaction" },
+  { value: "50+", label: "Happy Clients" },
+  { value: "8+", label: "Years of Excellence" },
 ];
 
 export default function Stats() {

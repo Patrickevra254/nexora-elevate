@@ -28,7 +28,7 @@ export default function Careers() {
       <section className="section-padding gradient-hero">
         <div className="container-custom">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
-            <h1 className="heading-xl mb-6">Build Your Career at <span className="gradient-text">Nexora</span></h1>
+            <h1 className="heading-xl mb-6">Build Your Career at <span className="gradient-text">Basiprog</span></h1>
             <p className="text-lg text-muted-foreground">Join a team of exceptional engineers solving enterprise-scale challenges.</p>
           </motion.div>
         </div>
@@ -37,7 +37,7 @@ export default function Careers() {
       {/* Perks */}
       <section className="section-padding">
         <div className="container-custom">
-          <SectionHeader badge="Culture" title="Why Engineers Choose Nexora" />
+          <SectionHeader badge="Culture" title="Why Creatives Choose Basiprog" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {perks.map((perk, i) => (
               <motion.div key={perk.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}

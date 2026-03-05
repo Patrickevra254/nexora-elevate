@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Cloud, Cpu, Code2, Lock } from "lucide-react";
+import { ArrowRight, Shield, Smartphone, Palette, Code2, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -15,7 +15,7 @@ const item = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 gradient-hero" />
       <div className="absolute inset-0 opacity-[0.03]" style={{
@@ -27,7 +27,7 @@ export default function Hero() {
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" />
       <div className="absolute bottom-1/4 left-1/4 w-64 h-64 bg-accent/3 rounded-full blur-3xl animate-float animation-delay-200" />
 
-      <div className="container-custom relative z-10 pt-32 pb-20">
+      <div className="container-custom relative z-10 pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <motion.div
@@ -38,19 +38,19 @@ export default function Hero() {
             <motion.div variants={item} className="mb-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-medium text-accent">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                Enterprise Technology Partner
+                Your Digital Solutions Partner
               </span>
             </motion.div>
 
             <motion.h1 variants={item} className="heading-xl mb-6 text-balance !font-black !tracking-tighter">
-              We Engineer the
+              We Craft the
               <br />
               <span className="gradient-text">Digital Future</span>
             </motion.h1>
 
             <motion.p variants={item} className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed">
-              Nexora Technologies delivers enterprise-grade software engineering, cloud infrastructure,
-              and cybersecurity solutions for organizations that demand excellence.
+              Basiprog Digital Solutions delivers premium software development, web &amp; mobile apps,
+              and product design (UI/UX) for organizations that demand excellence.
             </motion.p>
 
             <motion.div variants={item} className="flex flex-wrap gap-4">
@@ -73,45 +73,45 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="hidden lg:flex items-center justify-center relative"
           >
-            <div className="relative w-full max-w-md aspect-square">
+            <div className="relative w-full max-w-sm aspect-square">
               {/* Glowing ring */}
               <div className="absolute inset-0 rounded-full border border-accent/20 animate-float" />
               <div className="absolute inset-4 rounded-full border border-accent/10 animate-float animation-delay-200" />
               <div className="absolute inset-8 rounded-full border border-accent/5 animate-float animation-delay-400" />
               
               {/* Center orb */}
-              <div className="absolute inset-16 rounded-full bg-accent/10 backdrop-blur-sm flex items-center justify-center glow-accent">
-                <Code2 className="h-16 w-16 text-accent/60" />
+              <div className="absolute inset-14 rounded-full bg-accent/10 backdrop-blur-sm flex items-center justify-center glow-accent">
+                <Code2 className="h-12 w-12 text-accent/60" />
               </div>
 
               {/* Floating icons */}
               <motion.div
                 animate={{ y: [-8, 8, -8] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-8 right-8 p-3 rounded-xl surface-elevated shadow-lg"
+                className="absolute top-6 right-6 p-2.5 rounded-xl surface-elevated shadow-lg"
               >
-                <Cloud className="h-6 w-6 text-accent" />
+                <Globe className="h-5 w-5 text-accent" />
               </motion.div>
               <motion.div
                 animate={{ y: [8, -8, 8] }}
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-12 left-4 p-3 rounded-xl surface-elevated shadow-lg"
+                className="absolute bottom-10 left-2 p-2.5 rounded-xl surface-elevated shadow-lg"
               >
-                <Shield className="h-6 w-6 text-accent" />
+                <Shield className="h-5 w-5 text-accent" />
               </motion.div>
               <motion.div
                 animate={{ y: [-6, 10, -6] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-1/3 left-0 p-3 rounded-xl surface-elevated shadow-lg"
+                className="absolute top-1/3 left-0 p-2.5 rounded-xl surface-elevated shadow-lg"
               >
-                <Cpu className="h-6 w-6 text-accent" />
+                <Smartphone className="h-5 w-5 text-accent" />
               </motion.div>
               <motion.div
                 animate={{ y: [6, -10, 6] }}
                 transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-1/4 right-0 p-3 rounded-xl surface-elevated shadow-lg"
+                className="absolute bottom-1/4 right-0 p-2.5 rounded-xl surface-elevated shadow-lg"
               >
-                <Lock className="h-6 w-6 text-accent" />
+                <Palette className="h-5 w-5 text-accent" />
               </motion.div>
             </div>
           </motion.div>

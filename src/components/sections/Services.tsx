@@ -1,38 +1,38 @@
 import { motion } from "framer-motion";
-import { Code2, Cloud, Shield, Brain, Settings, Monitor } from "lucide-react";
+import { Code2, Globe, Smartphone, Palette, Layers, Monitor } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionHeader from "@/components/shared/SectionHeader";
 
 const services = [
   {
     icon: Code2,
-    title: "Custom Software Engineering",
-    description: "Full-stack development with modern architectures. From MVP to enterprise scale.",
+    title: "Software Development",
+    description: "Custom software solutions built with modern architectures. From MVP to enterprise scale.",
   },
   {
-    icon: Cloud,
-    title: "Cloud Infrastructure",
-    description: "AWS, Azure, and GCP expertise. Migration, optimization, and managed services.",
+    icon: Globe,
+    title: "Web Design",
+    description: "Stunning, responsive websites that convert visitors into customers with pixel-perfect design.",
   },
   {
-    icon: Shield,
-    title: "Cybersecurity",
-    description: "Threat assessment, compliance frameworks, and 24/7 security operations.",
-  },
-  {
-    icon: Brain,
-    title: "AI & Automation",
-    description: "Machine learning, intelligent automation, and data-driven decision systems.",
-  },
-  {
-    icon: Settings,
-    title: "IT Consulting",
-    description: "Strategic technology advisory, digital transformation, and roadmap planning.",
+    icon: Smartphone,
+    title: "Mobile App Development",
+    description: "Native and cross-platform mobile apps for iOS and Android that users love.",
   },
   {
     icon: Monitor,
-    title: "DevOps & SRE",
-    description: "CI/CD pipelines, infrastructure as code, and reliability engineering.",
+    title: "Web App Development",
+    description: "Powerful, scalable web applications with seamless user experiences and robust backends.",
+  },
+  {
+    icon: Palette,
+    title: "Product Design (UI/UX)",
+    description: "User-centered design that balances beauty with usability. Research-driven, pixel-perfect interfaces.",
+  },
+  {
+    icon: Layers,
+    title: "Digital Strategy",
+    description: "Strategic digital consulting, brand identity, and technology roadmap planning.",
   },
 ];
 
@@ -42,8 +42,8 @@ export default function ServicesSection() {
       <div className="container-custom">
         <SectionHeader
           badge="Our Services"
-          title="Engineering Excellence at Scale"
-          description="We deliver end-to-end technology solutions that drive measurable business outcomes."
+          title="Digital Excellence at Scale"
+          description="We deliver end-to-end digital solutions that drive measurable business outcomes."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

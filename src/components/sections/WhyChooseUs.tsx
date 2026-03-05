@@ -38,8 +38,8 @@ export default function WhyChooseUs() {
     <section className="section-padding">
       <div className="container-custom">
         <SectionHeader
-          badge="Why Nexora"
-          title="Built for Enterprise Demands"
+          badge="Why Basiprog"
+          title="Built for Digital Demands"
           description="We combine deep technical expertise with strategic thinking to deliver solutions that matter."
         />
 

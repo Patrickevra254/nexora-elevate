@@ -6,19 +6,19 @@ import SectionHeader from "@/components/shared/SectionHeader";
 
 const testimonials = [
   {
-    quote: "Nexora delivered a platform that handles millions of transactions daily without a hitch. Their engineering rigor is unmatched in the industry.",
+    quote: "Basiprog delivered a platform that handles millions of transactions daily without a hitch. Their engineering rigor is unmatched in the industry.",
     author: "Sarah Chen",
     role: "CTO, FinanceFlow",
     company: "Fortune 500 Financial Services",
   },
   {
-    quote: "The cybersecurity framework Nexora implemented has become the gold standard in our organization. Three years, zero incidents.",
+    quote: "The web application Basiprog built has become the gold standard in our organization. Flawless design and performance.",
     author: "Marcus Williams",
     role: "CISO, Federal Agency",
     company: "US Government",
   },
   {
-    quote: "Working with Nexora felt like extending our own team with world-class talent. The AI solution they built transformed our operations.",
+    quote: "Working with Basiprog felt like extending our own team with world-class talent. The mobile app they built transformed our operations.",
     author: "Elena Rodriguez",
     role: "VP Engineering, LogiPro",
     company: "Global Logistics",

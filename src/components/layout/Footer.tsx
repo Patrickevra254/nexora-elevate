@@ -10,10 +10,10 @@ const footerLinks = {
     { label: "Contact", href: "/contact" },
   ],
   Services: [
-    { label: "Software Engineering", href: "/services" },
-    { label: "Cloud Infrastructure", href: "/services" },
-    { label: "Cybersecurity", href: "/services" },
-    { label: "AI & Automation", href: "/services" },
+    { label: "Software Development", href: "/services" },
+    { label: "Web Design", href: "/services" },
+    { label: "Mobile & Web Apps", href: "/services" },
+    { label: "Product Design (UI/UX)", href: "/services" },
   ],
   Resources: [
     { label: "Case Studies", href: "/portfolio" },
@@ -32,12 +32,12 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="h-8 w-8 rounded-lg bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-sm">N</span>
+                <span className="text-accent-foreground font-bold text-sm">B</span>
               </div>
-              <span className="font-bold text-lg tracking-tight">Nexora</span>
+              <span className="font-bold text-lg tracking-tight">Basiprog</span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-              Enterprise-grade technology solutions. We architect, build, and scale digital infrastructure for the world's most ambitious organizations.
+              Premium digital solutions. We design, develop, and launch stunning websites, mobile apps, and digital products for ambitious businesses.
             </p>
           </div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Nexora Technologies. All rights reserved.
+            © {new Date().getFullYear()} Basiprog Digital Solutions. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>

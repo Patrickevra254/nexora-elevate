@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import { Code2, Cloud, Shield, Brain, Settings, Monitor, ArrowRight, Check } from "lucide-react";
+import { Code2, Globe, Smartphone, Palette, Layers, Monitor, ArrowRight, Check } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SectionHeader from "@/components/shared/SectionHeader";
 import CTA from "@/components/sections/CTA";
 import { Link } from "react-router-dom";
@@ -11,50 +10,50 @@ const services = [
   {
     id: "software",
     icon: Code2,
-    title: "Custom Software Engineering",
-    headline: "From architecture to deployment — engineered for scale.",
-    description: "We build mission-critical software systems that handle millions of users. Our full-stack teams deliver web applications, APIs, microservices, and mobile platforms with clean architecture and rigorous testing.",
-    features: ["Full-Stack Web Applications", "API Design & Development", "Microservices Architecture", "Mobile Applications", "Legacy Modernization", "Performance Optimization"],
+    title: "Software Development",
+    headline: "Custom software engineered for your business.",
+    description: "We build robust, scalable software systems using modern architectures. From backend APIs to full-stack platforms, we deliver clean, maintainable code that grows with your business.",
+    features: ["Full-Stack Development", "API Design & Integration", "SaaS Platforms", "Legacy Modernization", "Performance Optimization", "Quality Assurance"],
   },
   {
-    id: "cloud",
-    icon: Cloud,
-    title: "Cloud Infrastructure",
-    headline: "Cloud-native architecture for infinite scalability.",
-    description: "Whether you're migrating to the cloud or optimizing existing infrastructure, our certified engineers design, build, and manage cloud environments across AWS, Azure, and GCP.",
-    features: ["Cloud Migration", "Infrastructure as Code", "Kubernetes & Container Orchestration", "Cost Optimization", "Multi-Cloud Strategy", "24/7 Managed Services"],
+    id: "webdesign",
+    icon: Globe,
+    title: "Web Design",
+    headline: "Websites that captivate and convert.",
+    description: "We design and develop stunning, responsive websites that make a lasting impression. Every pixel is intentional, every interaction is smooth, and every page is optimized for conversion.",
+    features: ["Responsive Design", "Landing Pages", "Corporate Websites", "E-Commerce", "CMS Integration", "SEO Optimization"],
   },
   {
-    id: "security",
-    icon: Shield,
-    title: "Cybersecurity",
-    headline: "Enterprise-grade security for a threat-rich world.",
-    description: "Our security practice protects critical assets with comprehensive threat assessment, zero-trust architecture, and continuous monitoring. We help organizations achieve and maintain compliance.",
-    features: ["Security Architecture", "Penetration Testing", "SOC Operations", "Compliance (SOC2, HIPAA, FedRAMP)", "Zero-Trust Implementation", "Incident Response"],
+    id: "mobile",
+    icon: Smartphone,
+    title: "Mobile App Development",
+    headline: "Apps people love to use, every day.",
+    description: "Native and cross-platform mobile applications for iOS and Android. We focus on performance, beautiful interfaces, and seamless user experiences that keep users coming back.",
+    features: ["iOS & Android Apps", "React Native / Flutter", "App Store Optimization", "Push Notifications", "Offline Support", "Analytics Integration"],
   },
   {
-    id: "ai",
-    icon: Brain,
-    title: "AI & Automation",
-    headline: "Intelligent systems that learn, adapt, and scale.",
-    description: "We build production-grade AI solutions — from predictive analytics to natural language processing. Our data scientists and ML engineers turn complex data into actionable intelligence.",
-    features: ["Machine Learning Models", "NLP & Computer Vision", "Predictive Analytics", "Process Automation", "Data Pipeline Engineering", "AI Strategy Consulting"],
-  },
-  {
-    id: "consulting",
-    icon: Settings,
-    title: "IT Consulting",
-    headline: "Strategic guidance for digital transformation.",
-    description: "Our consultants bring decades of enterprise experience. We help organizations define technology strategy, optimize operations, and build high-performing engineering teams.",
-    features: ["Technology Strategy", "Digital Transformation", "Team Augmentation", "Architecture Review", "Vendor Assessment", "Technical Due Diligence"],
-  },
-  {
-    id: "devops",
+    id: "webapp",
     icon: Monitor,
-    title: "DevOps & SRE",
-    headline: "Ship faster. Break nothing. Sleep soundly.",
-    description: "We implement world-class CI/CD pipelines, observability platforms, and reliability engineering practices that accelerate delivery while maintaining production stability.",
-    features: ["CI/CD Pipelines", "Infrastructure Automation", "Observability & Monitoring", "Chaos Engineering", "SLA Management", "On-Call Engineering"],
+    title: "Web App Development",
+    headline: "Powerful web applications at scale.",
+    description: "Complex web applications with rich interfaces and robust backends. We build dashboards, portals, and SaaS products that handle real-world complexity with elegance.",
+    features: ["Single Page Applications", "Progressive Web Apps", "Real-Time Features", "Admin Dashboards", "Data Visualization", "Cloud Deployment"],
+  },
+  {
+    id: "uiux",
+    icon: Palette,
+    title: "Product Design (UI/UX)",
+    headline: "Design that users feel, not just see.",
+    description: "Research-driven design process that puts users first. We create intuitive interfaces, cohesive design systems, and interactive prototypes that bridge the gap between vision and reality.",
+    features: ["User Research", "Wireframing & Prototyping", "Visual Design", "Design Systems", "Usability Testing", "Interaction Design"],
+  },
+  {
+    id: "strategy",
+    icon: Layers,
+    title: "Digital Strategy",
+    headline: "Strategic guidance for the digital age.",
+    description: "We help organizations define their digital roadmap, optimize their tech stack, and make informed decisions that drive growth and efficiency.",
+    features: ["Technology Consulting", "Digital Transformation", "Brand Strategy", "Competitor Analysis", "Product Roadmapping", "Technical Audits"],
   },
 ];
 
@@ -64,8 +63,8 @@ export default function ServicesPage() {
       <section className="section-padding gradient-hero">
         <div className="container-custom">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
-            <h1 className="heading-xl mb-6">Technology Services <span className="gradient-text">Without Compromise</span></h1>
-            <p className="text-lg text-muted-foreground">End-to-end technology solutions engineered for enterprise demands.</p>
+            <h1 className="heading-xl mb-6">Digital Services <span className="gradient-text">Without Compromise</span></h1>
+            <p className="text-lg text-muted-foreground">End-to-end digital solutions crafted for businesses that demand excellence.</p>
           </motion.div>
         </div>
       </section>
