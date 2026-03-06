@@ -104,7 +104,7 @@ export default function Contact() {
                       <Textarea required name="message" rows={6} placeholder="Tell us about your project, timeline, and goals..." className="bg-background resize-none" />
                     </div>
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <Button variant="hero" size="lg" type="submit" disabled={loading} className="flex-1 sm:flex-none">
+                      <Button variant="hero" size="lg" type="submit" disabled={loading} className="w-full md:w-auto">
                         {loading ? "Sending..." : "Send via WhatsApp & Email"}
                         <MessageCircle className="ml-1 h-4 w-4" />
                       </Button>
