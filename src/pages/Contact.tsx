@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Send, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,21 +8,48 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import heroContact from "@/assets/hero-contact.jpg";
 
+const WHATSAPP_NUMBER = "15551234567"; // Update with real number
+const EMAIL_ADDRESS = "hello@basiprog.com";
+
 export default function Contact() {
   const { toast } = useToast();
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const name = (formData.get("name") as string)?.trim();
+    const email = (formData.get("email") as string)?.trim();
+    const phone = (formData.get("phone") as string)?.trim();
+    const company = (formData.get("company") as string)?.trim();
+    const budget = (formData.get("budget") as string)?.trim();
+    const message = (formData.get("message") as string)?.trim();
+
+    if (!name || !email || !message) return;
+
     setLoading(true);
+
+    const fullMessage = `New Contact from Basiprog Website\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone || "N/A"}\nCompany: ${company || "N/A"}\nBudget: ${budget || "N/A"}\n\nMessage:\n${message}`;
+
+    // Send via WhatsApp
+    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(fullMessage)}`;
+    window.open(waUrl, "_blank");
+
+    // Send via Email
+    const emailSubject = encodeURIComponent(`New Inquiry from ${name}`);
+    const emailBody = encodeURIComponent(fullMessage);
+    const mailUrl = `mailto:${EMAIL_ADDRESS}?subject=${emailSubject}&body=${emailBody}`;
+    window.open(mailUrl, "_blank");
+
     setTimeout(() => {
       setLoading(false);
       toast({
-        title: "Message sent successfully",
-        description: "We'll get back to you within 24 hours.",
+        title: "Message prepared successfully",
+        description: "WhatsApp and email windows have been opened. Please send the messages.",
       });
-      (e.target as HTMLFormElement).reset();
-    }, 1000);
+      form.reset();
+    }, 500);
   };
 
   return (
@@ -50,32 +77,41 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label className="text-sm font-medium mb-2 block">Full Name</label>
-                        <Input required placeholder="John Smith" className="bg-background" />
+                        <label className="text-sm font-medium mb-2 block">Full Name *</label>
+                        <Input required name="name" placeholder="John Smith" className="bg-background" />
                       </div>
                       <div>
-                        <label className="text-sm font-medium mb-2 block">Email</label>
-                        <Input required type="email" placeholder="john@company.com" className="bg-background" />
+                        <label className="text-sm font-medium mb-2 block">Email *</label>
+                        <Input required type="email" name="email" placeholder="john@company.com" className="bg-background" />
                       </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label className="text-sm font-medium mb-2 block">Company</label>
-                        <Input placeholder="Acme Corp" className="bg-background" />
+                        <label className="text-sm font-medium mb-2 block">Phone Number</label>
+                        <Input name="phone" type="tel" placeholder="+1 (555) 000-0000" className="bg-background" />
                       </div>
                       <div>
-                        <label className="text-sm font-medium mb-2 block">Budget Range</label>
-                        <Input placeholder="$50k - $200k" className="bg-background" />
+                        <label className="text-sm font-medium mb-2 block">Company</label>
+                        <Input name="company" placeholder="Acme Corp" className="bg-background" />
                       </div>
                     </div>
                     <div>
-                      <label className="text-sm font-medium mb-2 block">Project Details</label>
-                      <Textarea required rows={6} placeholder="Tell us about your project, timeline, and goals..." className="bg-background resize-none" />
+                      <label className="text-sm font-medium mb-2 block">Budget Range</label>
+                      <Input name="budget" placeholder="$50k - $200k" className="bg-background" />
                     </div>
-                    <Button variant="hero" size="lg" type="submit" disabled={loading} className="w-full md:w-auto">
-                      {loading ? "Sending..." : "Send Message"}
-                      <Send className="ml-1 h-4 w-4" />
-                    </Button>
+                    <div>
+                      <label className="text-sm font-medium mb-2 block">Project Details *</label>
+                      <Textarea required name="message" rows={6} placeholder="Tell us about your project, timeline, and goals..." className="bg-background resize-none" />
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button variant="hero" size="lg" type="submit" disabled={loading} className="flex-1 sm:flex-none">
+                        {loading ? "Sending..." : "Send via WhatsApp & Email"}
+                        <MessageCircle className="ml-1 h-4 w-4" />
+                      </Button>
+                    </div>
+                    <p className="text-xs text-muted-foreground">
+                      Clicking send will open WhatsApp and your email client with your message pre-filled.
+                    </p>
                   </form>
                 </CardContent>
               </Card>
@@ -84,7 +120,7 @@ export default function Contact() {
             {/* Info */}
             <div className="space-y-6">
               {[
-                { icon: Mail, title: "Email", value: "hello@basiprog.com" },
+                { icon: Mail, title: "Email", value: EMAIL_ADDRESS },
                 { icon: Phone, title: "Phone", value: "+1 (555) 123-4567" },
                 { icon: MapPin, title: "Headquarters", value: "New York, NY" },
               ].map((item) => (
