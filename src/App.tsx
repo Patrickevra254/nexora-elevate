@@ -9,6 +9,7 @@ import { useEffect, useState, lazy, Suspense } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import PageLoader from "@/components/shared/PageLoader";
+import ScrollToTopButton from "@/components/shared/ScrollToTop";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
@@ -70,6 +71,7 @@ const App = () => (
             <AnimatedRoutes />
           </main>
           <Footer />
+          <ScrollToTopButton />
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>
