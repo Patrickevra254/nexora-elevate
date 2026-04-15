@@ -11,8 +11,8 @@ const navLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Careers", href: "/careers" },
-  { label: "Blog", href: "/blog" },
+  // { label: "Careers", href: "/careers" },
+  // { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -21,7 +21,8 @@ export default function Navbar() {
   const location = useLocation();
   const [open, setOpen] = useState(false);
 
-  const toggleTheme = () => setTheme(resolvedTheme === "dark" ? "light" : "dark");
+  const toggleTheme = () =>
+    setTheme(resolvedTheme === "dark" ? "light" : "dark");
 
   return (
     <motion.header
@@ -66,10 +67,19 @@ export default function Navbar() {
             onClick={toggleTheme}
             className="rounded-lg text-muted-foreground hover:text-foreground"
           >
-            {resolvedTheme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            {resolvedTheme === "dark" ? (
+              <Sun className="h-4 w-4" />
+            ) : (
+              <Moon className="h-4 w-4" />
+            )}
           </Button>
 
-          <Button variant="hero" size="sm" className="hidden lg:inline-flex" asChild>
+          <Button
+            variant="hero"
+            size="sm"
+            className="hidden lg:inline-flex"
+            asChild
+          >
             <Link to="/contact">Get in Touch</Link>
           </Button>
 
@@ -97,7 +107,9 @@ export default function Navbar() {
                   </Link>
                 ))}
                 <Button variant="hero" className="mt-4" asChild>
-                  <Link to="/contact" onClick={() => setOpen(false)}>Get in Touch</Link>
+                  <Link to="/contact" onClick={() => setOpen(false)}>
+                    Get in Touch
+                  </Link>
                 </Button>
               </div>
             </SheetContent>

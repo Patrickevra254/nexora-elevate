@@ -26,7 +26,7 @@ const positions = [
 export default function Careers() {
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="relative section-padding overflow-hidden">
+      <section className="relative min-h-[90vh] section-padding overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroCareers} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />

@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Smartphone, Palette, Code2, Globe } from "lucide-react";
+import {
+  ArrowRight,
+  Shield,
+  Smartphone,
+  Palette,
+  Code2,
+  Globe,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -15,13 +22,16 @@ const item = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[100vh] flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 gradient-hero" />
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
-        backgroundSize: "40px 40px",
-      }} />
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)`,
+          backgroundSize: "40px 40px",
+        }}
+      />
 
       {/* Floating orbs */}
       <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" />
@@ -30,11 +40,7 @@ export default function Hero() {
       <div className="container-custom relative z-10 pt-24 pb-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="show"
-          >
+          <motion.div variants={container} initial="hidden" animate="show">
             <motion.div variants={item} className="mb-6">
               <span className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-medium text-accent">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
@@ -42,15 +48,22 @@ export default function Hero() {
               </span>
             </motion.div>
 
-            <motion.h1 variants={item} className="heading-xl mb-6 text-balance !font-black !tracking-tighter">
+            <motion.h1
+              variants={item}
+              className="heading-xl mb-6 text-balance !font-black !tracking-tighter"
+            >
               We Craft the
               <br />
               <span className="gradient-text">Digital Future</span>
             </motion.h1>
 
-            <motion.p variants={item} className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed">
-              Basiprog Digital Solutions delivers premium software development, web &amp; mobile apps,
-              and product design (UI/UX) for organizations that demand excellence.
+            <motion.p
+              variants={item}
+              className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
+            >
+              Basiprog Digital Solutions delivers premium software development,
+              web &amp; mobile apps, and product design (UI/UX) for
+              organizations that demand excellence.
             </motion.p>
 
             <motion.div variants={item} className="flex flex-wrap gap-4">
@@ -78,7 +91,7 @@ export default function Hero() {
               <div className="absolute inset-0 rounded-full border border-accent/20 animate-float" />
               <div className="absolute inset-4 rounded-full border border-accent/10 animate-float animation-delay-200" />
               <div className="absolute inset-8 rounded-full border border-accent/5 animate-float animation-delay-400" />
-              
+
               {/* Center orb */}
               <div className="absolute inset-14 rounded-full bg-accent/10 backdrop-blur-sm flex items-center justify-center glow-accent">
                 <Code2 className="h-12 w-12 text-accent/60" />
@@ -87,28 +100,44 @@ export default function Hero() {
               {/* Floating icons */}
               <motion.div
                 animate={{ y: [-8, 8, -8] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="absolute top-6 right-6 p-2.5 rounded-xl surface-elevated shadow-lg"
               >
                 <Globe className="h-5 w-5 text-accent" />
               </motion.div>
               <motion.div
                 animate={{ y: [8, -8, 8] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="absolute bottom-10 left-2 p-2.5 rounded-xl surface-elevated shadow-lg"
               >
                 <Shield className="h-5 w-5 text-accent" />
               </motion.div>
               <motion.div
                 animate={{ y: [-6, 10, -6] }}
-                transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 4.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="absolute top-1/3 left-0 p-2.5 rounded-xl surface-elevated shadow-lg"
               >
                 <Smartphone className="h-5 w-5 text-accent" />
               </motion.div>
               <motion.div
                 animate={{ y: [6, -10, 6] }}
-                transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="absolute bottom-1/4 right-0 p-2.5 rounded-xl surface-elevated shadow-lg"
               >
                 <Palette className="h-5 w-5 text-accent" />
