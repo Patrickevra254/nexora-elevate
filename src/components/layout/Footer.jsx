@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import logo from "../../assets/basiProgLogo.png";
+import darkLogo from "../../assets/basiProgLogo-dark.png";
+import lightLogo from "../../assets/basiProgLogo-light.png";
 
 const footerLinks = {
   Company: [
@@ -30,28 +31,19 @@ export default function Footer() {
       <div className="container-custom py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
-          {/* <div className="lg:col-span-2">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex items-center gap-2 mb-4">
-                <img
-                  src={logo}
-                  alt="Basiprog logo"
-                  className="h-10 sm:h-12 md:h-16 lg:h-20 xl:h-24 w-auto"
-                />
-              </div>
-            </div>
-            <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
-              Premium digital solutions. We design, develop, and launch stunning
-              websites, mobile apps, and digital products for ambitious
-              businesses.
-            </p>
-          </div> */}
-          {/* Brand */}
           <div className="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left">
+            {/* Light mode logo */}
             <img
-              src={logo}
+              src={darkLogo}
               alt="Basiprog logo"
-              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto mb-4"
+              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto mb-2 block dark:hidden"
+            />
+
+            {/* Dark mode logo */}
+            <img
+              src={lightLogo}
+              alt="Basiprog logo"
+              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto mb-2 hidden dark:block"
             />
 
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">

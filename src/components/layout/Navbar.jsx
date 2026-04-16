@@ -5,7 +5,9 @@ import { Menu, X, Moon, Sun, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useTheme } from "@/lib/theme";
-import logo from "../../assets/basiProgLogo.png";
+// import logo from "../../assets/basiProgLogo.png";
+import darkLogo from "../../assets/basiProgLogo-dark.png";
+import lightLogo from "../../assets/basiProgLogo-light.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -34,21 +36,20 @@ export default function Navbar() {
     >
       <nav className="container-custom flex h-[var(--nav-height)] items-center justify-between">
         {/* Logo */}
-        {/* <Link to="/" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-accent flex items-center justify-center">
-            <span className="text-accent-foreground font-bold text-sm">B</span>
-          </div>
-          <span className="font-bold text-lg tracking-tight text-foreground">
-            Basiprog
-          </span>
-        </Link> */}
 
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
+          {/* Light mode logo */}
           <img
-            src={logo}
+            src={darkLogo}
             alt="Basiprog logo"
-            className="h-10 sm:h-12 md:h-16 lg:h-20 xl:h-20 w-auto"
+            className="h-10 sm:h-12 md:h-16 lg:h-20 xl:h-20 w-auto block dark:hidden"
+          />
+
+          {/* Dark mode logo */}
+          <img
+            src={lightLogo}
+            alt="Basiprog logo"
+            className="h-10 sm:h-12 md:h-16 lg:h-20 xl:h-20 w-auto hidden dark:block"
           />
         </Link>
 
