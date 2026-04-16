@@ -99,7 +99,7 @@ export default function About() {
   return (
     <div className="pt-[var(--nav-height)]">
       {/* Hero */}
-      <section className="relative min-h-[90vh] section-padding overflow-hidden">
+      <section className="relative min-h-[70vh] section-padding overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroAbout} alt="" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />

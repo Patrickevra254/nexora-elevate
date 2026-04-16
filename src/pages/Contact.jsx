@@ -8,8 +8,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import heroContact from "@/assets/hero-contact.jpg";
 
-const WHATSAPP_NUMBER = "15551234567"; // Update with real number
-const EMAIL_ADDRESS = "hello@basiprog.com";
+const WHATSAPP_NUMBER = "08134645652"; // Update with real number
+const EMAIL_ADDRESS = "bassiprog@gmail.com";
 
 export default function Contact() {
   const { toast } = useToast();
@@ -53,7 +53,7 @@ export default function Contact() {
 
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="relative min-h-[90vh] section-padding overflow-hidden">
+      <section className="relative min-h-[70vh] section-padding overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroContact}

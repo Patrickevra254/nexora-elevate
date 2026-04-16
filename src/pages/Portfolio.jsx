@@ -75,7 +75,7 @@ export default function Portfolio() {
 
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="relative min-h-[90vh] section-padding overflow-hidden">
+      <section className="relative min-h-[70vh] section-padding overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroPortfolio}
