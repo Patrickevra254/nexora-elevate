@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import darkLogo from "../../assets/basiProgLogo-dark.png";
-import lightLogo from "../../assets/basiProgLogo-light.png";
+import logoMark from "../../assets/basiProgLogo-dark.png";
 
 const footerLinks = {
   Company: [
@@ -32,18 +31,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left">
-            {/* Light mode logo */}
-            <img
-              src={darkLogo}
-              alt="Basiprog logo"
-              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto mb-2 block dark:hidden"
-            />
-
-            {/* Dark mode logo */}
-            <img
-              src={lightLogo}
-              alt="Basiprog logo"
-              className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-auto mb-2 hidden dark:block"
+            <span
+              aria-label="Basiprog logo"
+              role="img"
+              className="block h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-[200px] sm:w-[220px] md:w-[260px] lg:w-[300px] xl:w-[340px] bg-accent mb-2"
+              style={{
+                WebkitMaskImage: `url(${logoMark})`,
+                maskImage: `url(${logoMark})`,
+                WebkitMaskRepeat: "no-repeat",
+                maskRepeat: "no-repeat",
+                WebkitMaskPosition: "left center",
+                maskPosition: "left center",
+                WebkitMaskSize: "contain",
+                maskSize: "contain",
+              }}
             />
 
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm">
