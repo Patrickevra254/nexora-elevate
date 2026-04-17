@@ -5,9 +5,7 @@ import { Menu, X, Moon, Sun, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useTheme } from "@/lib/theme";
-// import logo from "../../assets/basiProgLogo.png";
-import darkLogo from "../../assets/basiProgLogo-dark.png";
-import lightLogo from "../../assets/basiProgLogo-light.png";
+import logoMark from "../../assets/basiProgLogo-dark.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -37,19 +35,21 @@ export default function Navbar() {
       <nav className="container-custom flex h-[var(--nav-height)] items-center justify-between">
         {/* Logo */}
 
-        <Link to="/" className="flex items-center gap-2">
-          {/* Light mode logo */}
-          <img
-            src={darkLogo}
-            alt="Basiprog logo"
-            className="h-10 sm:h-12 md:h-16 lg:h-20 xl:h-20 w-auto block dark:hidden"
-          />
-
-          {/* Dark mode logo */}
-          <img
-            src={lightLogo}
-            alt="Basiprog logo"
-            className="h-10 sm:h-12 md:h-16 lg:h-20 xl:h-20 w-auto hidden dark:block"
+        <Link to="/" className="flex items-center gap-2 group">
+          <span
+            aria-label="Basiprog logo"
+            role="img"
+            className="block h-10 sm:h-12 md:h-16 lg:h-20 xl:h-20 w-[140px] sm:w-[160px] md:w-[200px] lg:w-[240px] xl:w-[260px] bg-accent transition-all duration-300 group-hover:brightness-110"
+            style={{
+              WebkitMaskImage: `url(${logoMark})`,
+              maskImage: `url(${logoMark})`,
+              WebkitMaskRepeat: "no-repeat",
+              maskRepeat: "no-repeat",
+              WebkitMaskPosition: "center",
+              maskPosition: "center",
+              WebkitMaskSize: "contain",
+              maskSize: "contain",
+            }}
           />
         </Link>
 
