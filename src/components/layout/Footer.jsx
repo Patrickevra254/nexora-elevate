@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import darkLogo from "../../assets/basiProgLogo-dark.png";
-import lightLogo from "../../assets/basiProgLogo-light.png";
+import logoMark from "../../assets/basiProgLogo-dark.png";
 
 const footerLinks = {
   Company: [
