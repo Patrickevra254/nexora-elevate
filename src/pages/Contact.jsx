@@ -26,16 +26,14 @@ const baseSchema = {
   phone: z
     .string()
     .trim()
+    .min(7, { message: "Phone must be at least 7 digits" })
     .max(20, { message: "Phone must be less than 20 characters" })
-    .regex(/^[+\d\s()-]*$/, { message: "Phone contains invalid characters" })
-    .optional()
-    .or(z.literal("")),
+    .regex(/^[+\d\s()-]+$/, { message: "Phone contains invalid characters" }),
   budget: z
     .string()
     .trim()
-    .max(50, { message: "Budget must be less than 50 characters" })
-    .optional()
-    .or(z.literal("")),
+    .min(2, { message: "Please share a budget range" })
+    .max(50, { message: "Budget must be less than 50 characters" }),
   message: z
     .string()
     .trim()
