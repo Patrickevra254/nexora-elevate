@@ -5,9 +5,7 @@ import { Menu, X, Moon, Sun, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useTheme } from "@/lib/theme";
-// import logo from "../../assets/basiProgLogo.png";
-import darkLogo from "../../assets/basiProgLogo-dark.png";
-import lightLogo from "../../assets/basiProgLogo-light.png";
+import logoMark from "../../assets/basiProgLogo-dark.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
