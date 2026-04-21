@@ -89,7 +89,7 @@ export default function PageHero({
             transition={{ duration: 0.8, delay: 0.4 }}
             className="hidden lg:flex items-center justify-center relative"
           >
-            <div className="relative w-full max-w-lg aspect-square">
+            <div className="relative w-full max-w-md aspect-[4/3]">
               {/* Soft glow behind image */}
               <div className="absolute -inset-6 rounded-3xl bg-accent/10 blur-3xl" />
               <div className="absolute inset-0 rounded-3xl border border-accent/20 animate-float" />
