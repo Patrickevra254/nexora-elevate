@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, MessageCircle, User, Building2 } from "lucide-react";
+import { Mail, MapPin, Phone, User, Building2 } from "lucide-react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -9,6 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import PageHero from "@/components/shared/PageHero";
+import heroImage from "@/assets/page-contact.jpg";
 
 const WHATSAPP_NUMBER = "2348134645652";
 
@@ -148,8 +149,8 @@ ${data.message}`;
         badge="Get in Touch"
         title={<>Let's Build <span className="gradient-text">Together</span></>}
         description="Tell us about your project. We'll respond within 24 hours."
-        centerIcon={MessageCircle}
-        floatingIcons={[Mail, Phone, MapPin, User]}
+        image={heroImage}
+        imageAlt="Glowing message envelopes connected by light beams"
       />
 
       {/* Contact Section */}

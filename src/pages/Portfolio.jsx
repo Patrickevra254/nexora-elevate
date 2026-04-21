@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Briefcase, Cloud, Brain, Shield, Rocket } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionHeader from "@/components/shared/SectionHeader";
 import CTA from "@/components/sections/CTA";
 import PageHero from "@/components/shared/PageHero";
+import heroImage from "@/assets/page-portfolio.jpg";
 
 const categories = ["All", "Cloud", "AI/ML", "Security", "Software", "DevOps"];
 
@@ -79,8 +80,8 @@ export default function Portfolio() {
         badge="Selected Work"
         title={<>Our <span className="gradient-text">Portfolio</span></>}
         description="Real projects. Real impact. Real results."
-        centerIcon={Briefcase}
-        floatingIcons={[Cloud, Brain, Shield, Rocket]}
+        image={heroImage}
+        imageAlt="Mosaic of project dashboards and screens floating in space"
       />
 
       <section className="section-padding">

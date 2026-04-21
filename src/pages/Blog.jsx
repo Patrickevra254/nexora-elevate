@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { Clock, ArrowRight, BookOpen, Cloud, Shield, Brain, Server } from "lucide-react";
+import { Clock, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SectionHeader from "@/components/shared/SectionHeader";
 import PageHero from "@/components/shared/PageHero";
+import heroImage from "@/assets/page-blog.jpg";
 
 const posts = [
   {
@@ -62,8 +63,8 @@ export default function Blog() {
         badge="From Our Team"
         title={<>Engineering <span className="gradient-text">Insights</span></>}
         description="Perspectives on technology, architecture, and innovation from our engineering team."
-        centerIcon={BookOpen}
-        floatingIcons={[Cloud, Shield, Brain, Server]}
+        image={heroImage}
+        imageAlt="Open glowing book with floating knowledge nodes"
       />
 
       <section className="section-padding">
