@@ -15,6 +15,7 @@ import SectionHeader from "@/components/shared/SectionHeader";
 import CTA from "@/components/sections/CTA";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/shared/PageHero";
+import heroImage from "@/assets/page-services.jpg";
 
 const services = [
   {
@@ -122,8 +123,8 @@ export default function ServicesPage() {
         badge="What We Do"
         title={<>Digital Services <span className="gradient-text">Without Compromise</span></>}
         description="End-to-end digital solutions crafted for businesses that demand excellence."
-        centerIcon={Layers}
-        floatingIcons={[Code2, Globe, Smartphone, Palette]}
+        image={heroImage}
+        imageAlt="Layered glass interface cards representing digital services"
       />
 
       <section className="section-padding">

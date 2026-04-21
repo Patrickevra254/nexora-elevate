@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
-import { Target, Eye, Users, Award, Globe, Lightbulb, Compass } from "lucide-react";
+import { Target, Eye, Users, Award, Globe, Lightbulb } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
 import PageHero from "@/components/shared/PageHero";
+import heroImage from "@/assets/page-about.jpg";
 
 const values = [
   {
@@ -102,8 +103,8 @@ export default function About() {
         badge="About Basiprog"
         title={<>Building the Future of <span className="gradient-text">Digital Products</span></>}
         description="Basiprog Digital Solutions is the trusted digital partner for ambitious organizations. We don't just write code — we craft exceptional digital experiences."
-        centerIcon={Compass}
-        floatingIcons={[Users, Award, Globe, Lightbulb]}
+        image={heroImage}
+        imageAlt="Diverse team collaborating around glowing digital interfaces"
       />
 
       {/* Mission */}

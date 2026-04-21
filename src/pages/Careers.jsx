@@ -1,11 +1,12 @@
 import { motion } from "framer-motion";
-import { MapPin, Clock, ArrowRight, Heart, Zap, Coffee, GraduationCap, Users } from "lucide-react";
+import { MapPin, Clock, ArrowRight, Heart, Zap, Coffee, GraduationCap } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/shared/SectionHeader";
 import { Link } from "react-router-dom";
 import PageHero from "@/components/shared/PageHero";
+import heroImage from "@/assets/page-careers.jpg";
 
 const perks = [
   { icon: Heart, title: "Health & Wellness", description: "Comprehensive health coverage, gym membership, mental health support." },
@@ -30,8 +31,8 @@ export default function Careers() {
         badge="We're Hiring"
         title={<>Build Your Career at <span className="gradient-text">Basiprog</span></>}
         description="Join a team of exceptional engineers solving enterprise-scale challenges."
-        centerIcon={Users}
-        floatingIcons={[Heart, Zap, Coffee, GraduationCap]}
+        image={heroImage}
+        imageAlt="Modern workspace with glowing desks and growth chart"
       />
 
       {/* Perks */}
