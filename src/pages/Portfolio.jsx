@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Briefcase, Cloud, Brain, Shield, Rocket } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import SectionHeader from "@/components/shared/SectionHeader";
 import CTA from "@/components/sections/CTA";
-import heroPortfolio from "@/assets/hero-portfolio.jpg";
+import PageHero from "@/components/shared/PageHero";
 
 const categories = ["All", "Cloud", "AI/ML", "Security", "Software", "DevOps"];
 
@@ -75,30 +75,13 @@ export default function Portfolio() {
 
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="relative min-h-[70vh] section-padding overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroPortfolio}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
-        </div>
-        <div className="container-custom relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
-          >
-            <h1 className="heading-xl mb-6">
-              Our <span className="gradient-text">Portfolio</span>
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Real projects. Real impact. Real results.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        badge="Selected Work"
+        title={<>Our <span className="gradient-text">Portfolio</span></>}
+        description="Real projects. Real impact. Real results."
+        centerIcon={Briefcase}
+        floatingIcons={[Cloud, Brain, Shield, Rocket]}
+      />
 
       <section className="section-padding">
         <div className="container-custom">

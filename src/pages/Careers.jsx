@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { MapPin, Clock, ArrowRight, Heart, Zap, Coffee, GraduationCap } from "lucide-react";
+import { MapPin, Clock, ArrowRight, Heart, Zap, Coffee, GraduationCap, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/shared/SectionHeader";
 import { Link } from "react-router-dom";
-import heroCareers from "@/assets/hero-careers.jpg";
+import PageHero from "@/components/shared/PageHero";
 
 const perks = [
   { icon: Heart, title: "Health & Wellness", description: "Comprehensive health coverage, gym membership, mental health support." },
@@ -26,18 +26,13 @@ const positions = [
 export default function Careers() {
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="relative min-h-[90vh] section-padding overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroCareers} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
-        </div>
-        <div className="container-custom relative z-10">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl">
-            <h1 className="heading-xl mb-6">Build Your Career at <span className="gradient-text">Basiprog</span></h1>
-            <p className="text-lg text-muted-foreground">Join a team of exceptional engineers solving enterprise-scale challenges.</p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        badge="We're Hiring"
+        title={<>Build Your Career at <span className="gradient-text">Basiprog</span></>}
+        description="Join a team of exceptional engineers solving enterprise-scale challenges."
+        centerIcon={Users}
+        floatingIcons={[Heart, Zap, Coffee, GraduationCap]}
+      />
 
       {/* Perks */}
       <section className="section-padding">

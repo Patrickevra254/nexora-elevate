@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { Target, Eye, Users, Award, Globe, Lightbulb } from "lucide-react";
+import { Target, Eye, Users, Award, Globe, Lightbulb, Compass } from "lucide-react";
 import SectionHeader from "@/components/shared/SectionHeader";
-import heroAbout from "@/assets/hero-about.jpg";
+import PageHero from "@/components/shared/PageHero";
 
 const values = [
   {
@@ -98,31 +98,13 @@ const leaders = [
 export default function About() {
   return (
     <div className="pt-[var(--nav-height)]">
-      {/* Hero */}
-      <section className="relative min-h-[70vh] section-padding overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroAbout} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
-        </div>
-        <div className="container-custom relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <h1 className="heading-xl mb-6">
-              Building the Future of{" "}
-              <span className="gradient-text">Digital Products</span>
-            </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Basiprog Digital Solutions is the trusted digital partner for
-              ambitious organizations. We don't just write code — we craft
-              exceptional digital experiences.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        badge="About Basiprog"
+        title={<>Building the Future of <span className="gradient-text">Digital Products</span></>}
+        description="Basiprog Digital Solutions is the trusted digital partner for ambitious organizations. We don't just write code — we craft exceptional digital experiences."
+        centerIcon={Compass}
+        floatingIcons={[Users, Award, Globe, Lightbulb]}
+      />
 
       {/* Mission */}
       <section className="section-padding">

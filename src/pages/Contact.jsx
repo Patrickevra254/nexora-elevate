@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
-import heroContact from "@/assets/hero-contact.jpg";
+import PageHero from "@/components/shared/PageHero";
 
 const WHATSAPP_NUMBER = "2348134645652";
 
@@ -144,28 +144,13 @@ ${data.message}`;
 
   return (
     <div className="pt-[var(--nav-height)]">
-      {/* Hero Section */}
-      <section className="relative min-h-[70vh] section-padding overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroContact} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
-        </div>
-
-        <div className="container-custom relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
-          >
-            <h1 className="heading-xl mb-6">
-              Let's Build <span className="gradient-text">Together</span>
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Tell us about your project. We'll respond within 24 hours.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        badge="Get in Touch"
+        title={<>Let's Build <span className="gradient-text">Together</span></>}
+        description="Tell us about your project. We'll respond within 24 hours."
+        centerIcon={MessageCircle}
+        floatingIcons={[Mail, Phone, MapPin, User]}
+      />
 
       {/* Contact Section */}
       <section className="section-padding">
