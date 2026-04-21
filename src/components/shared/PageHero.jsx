@@ -31,7 +31,7 @@ export default function PageHero({
   children,
 }) {
   return (
-    <section className="relative min-h-[100vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[80vh] flex items-start overflow-hidden">
       {/* Background — identical to home Hero */}
       <div className="absolute inset-0 gradient-hero" />
       <div
