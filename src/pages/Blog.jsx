@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Clock, ArrowRight } from "lucide-react";
+import { Clock, ArrowRight, BookOpen, Cloud, Shield, Brain, Server } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import SectionHeader from "@/components/shared/SectionHeader";
-import heroBlog from "@/assets/hero-blog.jpg";
+import PageHero from "@/components/shared/PageHero";
 
 const posts = [
   {
@@ -58,27 +58,13 @@ const posts = [
 export default function Blog() {
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="relative min-h-[90vh] section-padding overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={heroBlog} alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
-        </div>
-        <div className="container-custom relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl"
-          >
-            <h1 className="heading-xl mb-6">
-              Engineering <span className="gradient-text">Insights</span>
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              Perspectives on technology, architecture, and innovation from our
-              engineering team.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        badge="From Our Team"
+        title={<>Engineering <span className="gradient-text">Insights</span></>}
+        description="Perspectives on technology, architecture, and innovation from our engineering team."
+        centerIcon={BookOpen}
+        floatingIcons={[Cloud, Shield, Brain, Server]}
+      />
 
       <section className="section-padding">
         <div className="container-custom">

@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 import SectionHeader from "@/components/shared/SectionHeader";
 import CTA from "@/components/sections/CTA";
 import { Link } from "react-router-dom";
-import heroServices from "@/assets/hero-services.jpg";
+import PageHero from "@/components/shared/PageHero";
 
 const services = [
   {
@@ -118,33 +118,13 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="pt-[var(--nav-height)]">
-      <section className="relative min-h-[70vh] section-padding overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroServices}
-            alt=""
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40" />
-        </div>
-        <div className="container-custom relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <h1 className="heading-xl mb-6">
-              Digital Services{" "}
-              <span className="gradient-text">Without Compromise</span>
-            </h1>
-            <p className="text-lg text-muted-foreground">
-              End-to-end digital solutions crafted for businesses that demand
-              excellence.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+      <PageHero
+        badge="What We Do"
+        title={<>Digital Services <span className="gradient-text">Without Compromise</span></>}
+        description="End-to-end digital solutions crafted for businesses that demand excellence."
+        centerIcon={Layers}
+        floatingIcons={[Code2, Globe, Smartphone, Palette]}
+      />
 
       <section className="section-padding">
         <div className="container-custom space-y-16">
