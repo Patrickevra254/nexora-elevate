@@ -78,8 +78,8 @@ export default function Portfolio() {
     <div className="pt-[var(--nav-height)]">
       <PageHero
         badge="Selected Work"
-        title={<>Our <span className="gradient-text">Portfolio</span></>}
-        description="Real projects. Real impact. Real results."
+        title={<>Work That <span className="gradient-text">Drives Results</span></>}
+        description="From Fortune 500 enterprises to ambitious startups, we partner with bold teams to ship products that move the needle. Real projects. Real impact. Real numbers."
         image={heroImage}
         imageAlt="Mosaic of project dashboards and screens floating in space"
       />
