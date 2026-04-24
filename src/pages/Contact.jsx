@@ -104,7 +104,7 @@ export default function Contact() {
     const data = result.data;
     const senderLabel = type === "company" ? "Company Inquiry" : "Individual Inquiry";
 
-    const fullMessage = `*New ${senderLabel} from Basiprog Website*
+    const fullMessage = `*New ${senderLabel} from Bassiprog Website*
 
 *Name:* ${data.name}
 *Email:* ${data.email}

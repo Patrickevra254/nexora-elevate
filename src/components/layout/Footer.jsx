@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import logoMark from "../../assets/basiProgLogo-dark.png";
+import logoMark from "../../assets/bassiProgLogo-dark.png";
 
 const footerLinks = {
   Company: [
@@ -32,7 +32,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left">
             <span
-              aria-label="Basiprog logo"
+              aria-label="Bassiprog logo"
               role="img"
               className="block h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 w-[200px] sm:w-[220px] md:w-[260px] lg:w-[300px] xl:w-[340px] bg-accent mb-2"
               style={{
@@ -78,7 +78,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Basiprog Digital Solutions. All rights
+            © {new Date().getFullYear()} Bassiprog Digital Solutions. All rights
             reserved.
           </p>
           <div className="flex items-center gap-6">

@@ -24,7 +24,7 @@ export default function CTA() {
               <span className="gradient-text">Extraordinary?</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-xl mx-auto mb-8">
-              Let's discuss how Basiprog can accelerate your digital strategy and deliver measurable results.
+              Let's discuss how Bassiprog can accelerate your digital strategy and deliver measurable results.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button variant="hero" size="xl" asChild>

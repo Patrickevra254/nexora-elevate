@@ -38,7 +38,7 @@ export default function WhyChooseUs() {
     <section className="section-padding">
       <div className="container-custom">
         <SectionHeader
-          badge="Why Basiprog"
+          badge="Why Bassiprog"
           title="Built for Digital Demands"
           description="We combine deep technical expertise with strategic thinking to deliver solutions that matter."
         />

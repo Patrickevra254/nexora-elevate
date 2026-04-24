@@ -100,9 +100,9 @@ export default function About() {
   return (
     <div className="pt-[var(--nav-height)]">
       <PageHero
-        badge="About Basiprog"
+        badge="About Bassiprog"
         title={<>Building the Future of <span className="gradient-text">Digital Products</span></>}
-        description="Basiprog Digital Solutions is the trusted digital partner for ambitious organizations. We don't just write code — we craft exceptional digital experiences."
+        description="Bassiprog Digital Solutions is the trusted digital partner for ambitious organizations. We don't just write code — we craft exceptional digital experiences."
         image={heroImage}
         imageAlt="Diverse team collaborating around glowing digital interfaces"
       />

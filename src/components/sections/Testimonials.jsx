@@ -6,19 +6,19 @@ import SectionHeader from "@/components/shared/SectionHeader";
 
 const testimonials = [
   {
-    quote: "Basiprog delivered a platform that handles millions of transactions daily without a hitch. Their engineering rigor is unmatched in the industry.",
+    quote: "Bassiprog delivered a platform that handles millions of transactions daily without a hitch. Their engineering rigor is unmatched in the industry.",
     author: "Sarah Chen",
     role: "CTO, FinanceFlow",
     company: "Fortune 500 Financial Services",
   },
   {
-    quote: "The web application Basiprog built has become the gold standard in our organization. Flawless design and performance.",
+    quote: "The web application Bassiprog built has become the gold standard in our organization. Flawless design and performance.",
     author: "Marcus Williams",
     role: "CISO, Federal Agency",
     company: "US Government",
   },
   {
-    quote: "Working with Basiprog felt like extending our own team with world-class talent. The mobile app they built transformed our operations.",
+    quote: "Working with Bassiprog felt like extending our own team with world-class talent. The mobile app they built transformed our operations.",
     author: "Elena Rodriguez",
     role: "VP Engineering, LogiPro",
     company: "Global Logistics",

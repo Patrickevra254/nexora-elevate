@@ -29,7 +29,7 @@ export default function Careers() {
     <div className="pt-[var(--nav-height)]">
       <PageHero
         badge="We're Hiring"
-        title={<>Build Your Career at <span className="gradient-text">Basiprog</span></>}
+        title={<>Build Your Career at <span className="gradient-text">Bassiprog</span></>}
         description="Join a team of exceptional engineers solving enterprise-scale challenges."
         image={heroImage}
         imageAlt="Modern workspace with glowing desks and growth chart"
@@ -38,7 +38,7 @@ export default function Careers() {
       {/* Perks */}
       <section className="section-padding">
         <div className="container-custom">
-          <SectionHeader badge="Culture" title="Why Creatives Choose Basiprog" />
+          <SectionHeader badge="Culture" title="Why Creatives Choose Bassiprog" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {perks.map((perk, i) => (
               <motion.div key={perk.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
