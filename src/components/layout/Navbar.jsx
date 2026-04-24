@@ -5,7 +5,7 @@ import { Menu, X, Moon, Sun, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useTheme } from "@/lib/theme";
-import logoMark from "../../assets/basiProgLogo-dark.png";
+import logoMark from "../../assets/bassiProgLogo-dark.png";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -37,7 +37,7 @@ export default function Navbar() {
 
         <Link to="/" className="flex items-center gap-2 group">
           <span
-            aria-label="Basiprog logo"
+            aria-label="Bassiprog logo"
             role="img"
             className="block h-10 sm:h-12 md:h-16 lg:h-20 xl:h-20 w-[140px] sm:w-[160px] md:w-[200px] lg:w-[240px] xl:w-[260px] bg-accent transition-all duration-300 group-hover:brightness-110"
             style={{

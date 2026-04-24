@@ -61,7 +61,7 @@ export default function Hero() {
               variants={item}
               className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
             >
-              Basiprog Digital Solutions delivers premium software development,
+              Bassiprog Digital Solutions delivers premium software development,
               web &amp; mobile apps, and product design (UI/UX) for
               organizations that demand excellence.
             </motion.p>
