@@ -376,19 +376,33 @@ ${data.message}`;
                       )}
                     </div>
 
-                    <Button
-                      variant="hero"
-                      size="lg"
-                      type="submit"
-                      disabled={loading}
-                      className="w-full md:w-auto"
-                    >
-                      {loading ? "Opening WhatsApp..." : "Send via WhatsApp"}
-                      <MessageCircle className="ml-1 h-4 w-4" />
-                    </Button>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button
+                        variant="hero"
+                        size="lg"
+                        type="submit"
+                        disabled={!!loading}
+                        className="w-full sm:w-auto"
+                      >
+                        {loading === "whatsapp" ? "Opening WhatsApp..." : "Send via WhatsApp"}
+                        <MessageCircle className="ml-1 h-4 w-4" />
+                      </Button>
+
+                      <Button
+                        variant="hero-outline"
+                        size="lg"
+                        type="button"
+                        onClick={handleEmailClick}
+                        disabled={!!loading}
+                        className="w-full sm:w-auto"
+                      >
+                        {loading === "email" ? "Opening Email..." : "Send via Email"}
+                        <Mail className="ml-1 h-4 w-4" />
+                      </Button>
+                    </div>
 
                     <p className="text-xs text-muted-foreground">
-                      Clicking send will open WhatsApp with your message ready.
+                      Choose your preferred channel — we'll respond within 24 hours.
                     </p>
                   </form>
                 </CardContent>
