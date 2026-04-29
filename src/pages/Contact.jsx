@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Phone, User, Building2, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Phone, User, Building2, MessageCircle, Send } from "lucide-react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -60,14 +60,13 @@ const companySchema = z.object({
 
 export default function Contact() {
   const { toast } = useToast();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(null); // 'whatsapp' | 'email' | null
   const [type, setType] = useState("individual");
   const [errors, setErrors] = useState({});
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const EMAIL_ADDRESS = "bassiprog@gmail.com";
 
-    const form = e.target;
+  const submitForm = (form, channel) => {
     const formData = new FormData(form);
 
     const raw = {
@@ -99,12 +98,13 @@ export default function Contact() {
     }
 
     setErrors({});
-    setLoading(true);
+    setLoading(channel);
 
     const data = result.data;
     const senderLabel = type === "company" ? "Company Inquiry" : "Individual Inquiry";
 
-    const fullMessage = `*New ${senderLabel} from Bassiprog Website*
+    if (channel === "whatsapp") {
+      const fullMessage = `*New ${senderLabel} from Bassiprog Website*
 
 *Name:* ${data.name}
 *Email:* ${data.email}
@@ -114,20 +114,53 @@ ${type === "company" ? `*Company:* ${data.company}\n` : ""}*Budget:* ${data.budg
 *Message:*
 ${data.message}`;
 
-    const waUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(
-      fullMessage
-    )}`;
+      const waUrl = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(
+        fullMessage
+      )}`;
+      window.open(waUrl, "_blank");
 
-    window.open(waUrl, "_blank");
+      setTimeout(() => {
+        setLoading(null);
+        toast({
+          title: "Redirecting to WhatsApp",
+          description: "Your message is ready. Just press send.",
+        });
+        form.reset();
+      }, 500);
+    } else {
+      const subject = `New ${senderLabel} from Bassiprog Website`;
+      const body = `Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone || "N/A"}
+${type === "company" ? `Company: ${data.company}\n` : ""}Budget: ${data.budget || "N/A"}
 
-    setTimeout(() => {
-      setLoading(false);
-      toast({
-        title: "Redirecting to WhatsApp",
-        description: "Your message is ready. Just press send.",
-      });
-      form.reset();
-    }, 500);
+Message:
+${data.message}`;
+
+      const mailUrl = `mailto:${EMAIL_ADDRESS}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailUrl;
+
+      setTimeout(() => {
+        setLoading(null);
+        toast({
+          title: "Opening your email app",
+          description: "Your message is ready. Just press send.",
+        });
+        form.reset();
+      }, 500);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    submitForm(e.target, "whatsapp");
+  };
+
+  const handleEmailClick = (e) => {
+    const form = e.currentTarget.closest("form");
+    if (form) submitForm(form, "email");
   };
 
   const clearError = (field) => {
@@ -343,19 +376,33 @@ ${data.message}`;
                       )}
                     </div>
 
-                    <Button
-                      variant="hero"
-                      size="lg"
-                      type="submit"
-                      disabled={loading}
-                      className="w-full md:w-auto"
-                    >
-                      {loading ? "Opening WhatsApp..." : "Send via WhatsApp"}
-                      <MessageCircle className="ml-1 h-4 w-4" />
-                    </Button>
+                    <div className="flex flex-col sm:flex-row gap-3">
+                      <Button
+                        variant="hero"
+                        size="lg"
+                        type="submit"
+                        disabled={!!loading}
+                        className="w-full sm:w-auto"
+                      >
+                        {loading === "whatsapp" ? "Opening WhatsApp..." : "Send via WhatsApp"}
+                        <MessageCircle className="ml-1 h-4 w-4" />
+                      </Button>
+
+                      <Button
+                        variant="hero-outline"
+                        size="lg"
+                        type="button"
+                        onClick={handleEmailClick}
+                        disabled={!!loading}
+                        className="w-full sm:w-auto"
+                      >
+                        {loading === "email" ? "Opening Email..." : "Send via Email"}
+                        <Mail className="ml-1 h-4 w-4" />
+                      </Button>
+                    </div>
 
                     <p className="text-xs text-muted-foreground">
-                      Clicking send will open WhatsApp with your message ready.
+                      Choose your preferred channel — we'll respond within 24 hours.
                     </p>
                   </form>
                 </CardContent>
